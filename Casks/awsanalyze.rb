@@ -2,8 +2,8 @@ cask "awsanalyze" do
   version "1.0.0"
   sha256 "6318b19fa0a9c0a94c6b7f4b6bf2b1284720a6064a186b723740d75be627e723"
 
-  url "https://github.com/itsfreddyrb/awsanalyze/releases/download/v#{version}/AWSAnalyze.dmg",
-      verified: "github.com/itsfreddyrb/awsanalyze/"
+  url "https://github.com/itsfreddyrb/awsanalyze-releases/releases/download/v#{version}/AWSAnalyze.dmg",
+      verified: "github.com/itsfreddyrb/awsanalyze-releases/"
   name "AWSAnalyze"
   desc "macOS app that scans AWS infrastructure and renders it as an interactive graph"
   homepage "https://awsanalyze.app/"
