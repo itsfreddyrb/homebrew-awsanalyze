@@ -19,6 +19,17 @@ cask "awsanalyze" do
 
   app "AWSAnalyze.app"
 
+  # Strip Gatekeeper's quarantine flag so the signed-but-not-yet-notarized
+  # build doesn't hit the "damaged / cannot be opened" wall on first launch.
+  # The app IS codesigned with a Developer ID certificate — we're just
+  # skipping Apple's notarization scan for now. This will be removed once
+  # the release pipeline emits notarized builds (roadmap item #2).
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/AWSAnalyze.app"],
+                   sudo: false
+  end
+
   # Uninstall cleanup — Keychain entries, SwiftData store, OAuth tokens.
   zap trash: [
     "~/Library/Containers/com.awsanalyze.app",
