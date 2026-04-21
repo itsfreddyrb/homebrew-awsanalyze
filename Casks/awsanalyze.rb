@@ -1,6 +1,6 @@
 cask "awsanalyze" do
-  version "1.0.1"
-  sha256 "738aec614939bcecc5c25dd79f81f2e719469e42ced0971792f4e35c040df3c1"
+  version "1.1.0"
+  sha256 "ba52190dd06492b354eb3f871e76778dce527d7eb7934256a1d428a8c8f11464"
 
   url "https://github.com/itsfreddyrb/awsanalyze-releases/releases/download/v#{version}/AWSAnalyze.dmg",
       verified: "github.com/itsfreddyrb/awsanalyze-releases/"
