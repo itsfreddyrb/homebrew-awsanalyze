@@ -13,6 +13,15 @@ That's it. The cask downloads the DMG, verifies its SHA256 and installs
 `AWSAnalyze.app` into `/Applications`. The app is signed and notarized by
 Apple, so it opens without Gatekeeper warnings.
 
+Recent Homebrew versions refuse casks from third-party taps until you trust
+the tap. If you see "Refusing to load cask ... from untrusted tap", run:
+
+```bash
+brew trust itsfreddyrb/awsanalyze
+```
+
+and install again.
+
 Prefer a plain download? Get the DMG at https://awsanalyze.app.
 
 ## Upgrade
