@@ -9,8 +9,11 @@ that scans AWS accounts and draws your infrastructure as an interactive graph.
 brew install --cask itsfreddyrb/awsanalyze/awsanalyze
 ```
 
-That's it. The cask handles the download, SHA256 verification, Gatekeeper
-quarantine flag, and installs `AWSAnalyze.app` into `/Applications`.
+That's it. The cask downloads the DMG, verifies its SHA256 and installs
+`AWSAnalyze.app` into `/Applications`. The app is signed and notarized by
+Apple, so it opens without Gatekeeper warnings.
+
+Prefer a plain download? Get the DMG at https://awsanalyze.app.
 
 ## Upgrade
 
@@ -35,7 +38,7 @@ of AppKit/SwiftUI.
 
 ## Versioning
 
-This tap tracks [awsanalyze releases](https://github.com/itsfreddyrb/awsanalyze/releases).
+This tap tracks [awsanalyze releases](https://github.com/itsfreddyrb/awsanalyze-releases/releases).
 Each release updates the `version` + `sha256` fields in
 [`Casks/awsanalyze.rb`](Casks/awsanalyze.rb). The `livecheck` block points
 Homebrew's update scanner at the GitHub Releases API so `brew livecheck`
